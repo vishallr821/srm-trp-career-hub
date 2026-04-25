@@ -639,7 +639,7 @@
             <h1><span class="hi">SRM TRP</span> <span class="lo">Opportunity Hub</span></h1>
           </div>
         </div>
-        <p>Centralized repository of hackathons, internships, and company contests for all engineering departments —
+        <p>Centralized repository of hackathons, internships, and core domain contests for all engineering departments —
           Mechanical, EEE, ECE, Civil, and CSE/Allied (AIDS · AIML · IT). Updated for 2026–2027.</p>
       </div>
     </div>
@@ -647,7 +647,7 @@
     <!-- STATS -->
     <div class="stats-row">
       <div class="stat">
-        <div class="stat-n" id="total-cnt">140+</div>
+        <div class="stat-n" id="total-cnt">78</div>
         <div class="stat-l">Total opportunities</div>
       </div>
       <div class="stat">
@@ -655,11 +655,11 @@
         <div class="stat-l">Departments</div>
       </div>
       <div class="stat">
-        <div class="stat-n">46</div>
-        <div class="stat-l">Company contests</div>
+        <div class="stat-n">29</div>
+        <div class="stat-l">Core Domain Contests</div>
       </div>
       <div class="stat">
-        <div class="stat-n">50+</div>
+        <div class="stat-n">27</div>
         <div class="stat-l">Internship programs</div>
       </div>
       <div class="stat">
@@ -672,7 +672,7 @@
     <div class="tabs">
       <div class="tab active" onclick="switchTab('hackathons',this)">🏆 Hackathons</div>
       <div class="tab" onclick="switchTab('internships',this)">💼 Internships</div>
-      <div class="tab" onclick="switchTab('contests',this)">⚙️ Company Contests</div>
+      <div class="tab" onclick="switchTab('contests',this)">⚙️ Core Domain Contests</div>
     </div>
 
     <div class="notice" id="tab-notice">Showing hackathons — filter by department, level, and category below.</div>
@@ -886,24 +886,7 @@
       },
 
       {
-        id: 'h12', name: 'ISRO Robotics Challenge', org: 'ISRO / Department of Space',
-        depts: ['mech', 'ece', 'eee'], level: 'national', cat: 'gov',
-        focus: 'Space robotics, autonomous systems, embedded control, aerospace engineering',
-        date: 'Dec 2026 (Registration: Oct–Nov)',
-        rounds: ['Concept Paper Submission', 'Prototype Design Review', 'Technical Evaluation', 'Final Demo (ISRO campus)'],
-        roundDetail: 'Teams design and build robots for space-inspired applications — rovers, manipulators, autonomous navigation. ISRO engineers evaluate technical soundness + practical feasibility. Shortlisted teams visit ISRO campus for final demo. Teams of 3–6.',
-        prize: 'Cash prizes + ISRO recognition certificate + potential internship at ISRO',
-        perks: 'ISRO internship pathway, space tech portfolio, national aerospace credibility, research publication opportunity',
-        winners: [
-          { ps: 'Lunar rover terrain traversal prototype', sol: '4-wheel rocker-bogie mechanism + ROS-controlled navigation + ultrasonic obstacle avoidance' },
-          { ps: 'Space manipulator arm for satellite assembly', sol: '6-DOF robotic arm with inverse kinematics + force sensor feedback control' },
-        ],
-        tip: 'Mech, ECE, EEE students have the strongest shot. Focus on mechanical robustness + clean embedded code over flashy features.',
-        link: 'https://www.isro.gov.in', jobs: false
-      },
-
-      {
-        id: 'h13', name: 'HackWithIndia 2027', org: 'HackWithIndia + Industry Partners',
+        id: 'h12', name: 'HackWithIndia 2027', org: 'HackWithIndia + Industry Partners',
         depts: ['cse', 'ece', 'eee'], level: 'national', cat: 'it',
         focus: 'Open innovation, AI, sustainability, fintech, health, social impact',
         date: 'Multiple events throughout 2027',
@@ -918,7 +901,7 @@
 
       // ── INTERNATIONAL ──
       {
-        id: 'h14', name: 'Google Solution Challenge 2027', org: 'Google / GDSC',
+        id: 'h13', name: 'Google Solution Challenge 2027', org: 'Google / GDSC',
         depts: ['cse', 'ece'], level: 'international', cat: 'cse',
         focus: 'UN SDG-aligned solutions using Google Cloud, Gemini AI, Firebase',
         date: 'Jan–Jun 2027',
@@ -935,7 +918,7 @@
       },
 
       {
-        id: 'h15', name: 'NASA Space Apps Challenge 2027', org: 'NASA (Global)',
+        id: 'h14', name: 'NASA Space Apps Challenge 2027', org: 'NASA (Global)',
         depts: ['mech', 'ece', 'eee', 'cse'], level: 'international', cat: 'gov',
         focus: 'Space science, climate, satellite data, earth observation, aerospace systems',
         date: 'Oct 2027 (48-hr, Registration: Sep 2027)',
@@ -952,7 +935,7 @@
       },
 
       {
-        id: 'h16', name: 'IBM Call for Code 2027', org: 'IBM',
+        id: 'h15', name: 'IBM Call for Code 2027', org: 'IBM',
         depts: ['cse', 'ece'], level: 'international', cat: 'ai',
         focus: 'Climate change, equitable resources, open-source AI using WatsonX',
         date: 'Throughout 2027 (Rolling submissions)',
@@ -969,7 +952,7 @@
       },
 
       {
-        id: 'h17', name: 'Google Summer of Code (GSoC) 2027', org: 'Google',
+        id: 'h16', name: 'Google Summer of Code (GSoC) 2027', org: 'Google',
         depts: ['cse', 'ece'], level: 'international', cat: 'cse',
         focus: 'Open source contributions to top FOSS organizations worldwide',
         date: 'Jan–Aug 2027 (Proposal deadline ~Apr)',
@@ -986,7 +969,7 @@
       },
 
       {
-        id: 'h18', name: 'Meta Hacker Cup 2027', org: 'Meta (Facebook)',
+        id: 'h17', name: 'Meta Hacker Cup 2027', org: 'Meta (Facebook)',
         depts: ['cse'], level: 'international', cat: 'cse',
         focus: 'Competitive programming — algorithms, math, advanced graph + DP problems',
         date: 'Jun–Oct 2027 (multiple rounds)',
@@ -1002,7 +985,7 @@
       },
 
       {
-        id: 'h19', name: 'ETHGlobal Hackathons 2027', org: 'ETHGlobal',
+        id: 'h18', name: 'ETHGlobal Hackathons 2027', org: 'ETHGlobal',
         depts: ['cse'], level: 'international', cat: 'dev',
         focus: 'Ethereum, Web3, DeFi, zero-knowledge proofs, NFT infrastructure, blockchain',
         date: 'Multiple events 2027 (NYC, Paris, Singapore, Bangkok + online)',
@@ -1018,7 +1001,7 @@
       },
 
       {
-        id: 'h20', name: 'MLH Global Hack Week 2027', org: 'Major League Hacking',
+        id: 'h19', name: 'MLH Global Hack Week 2027', org: 'Major League Hacking',
         depts: ['cse', 'ece'], level: 'international', cat: 'dev',
         focus: 'Themed weekly hacks — AI, Web3, Open Source, Hardware, Productivity',
         date: 'Monthly events throughout 2027',
@@ -1032,7 +1015,7 @@
       },
 
       {
-        id: 'h21', name: 'HackMIT 2027', org: 'MIT',
+        id: 'h20', name: 'HackMIT 2027', org: 'MIT',
         depts: ['cse', 'ece'], level: 'international', cat: 'cse',
         focus: 'Open theme — software, hardware, AI, social impact (any domain)',
         date: 'Sep 2027 (Application: Aug 2027)',
@@ -1048,7 +1031,7 @@
       },
 
       {
-        id: 'h22', name: 'AngelHack Global Series 2027', org: 'AngelHack',
+        id: 'h21', name: 'AngelHack Global Series 2027', org: 'AngelHack',
         depts: ['cse', 'ece', 'mech'], level: 'international', cat: 'dev',
         focus: 'Startup-focused innovation — AI, fintech, health, climate, developer tools',
         date: 'Multi-city 2027 (Asia, US, Europe + Virtual)',
@@ -1064,7 +1047,7 @@
       },
 
       {
-        id: 'h23', name: 'TechCrunch Disrupt Hackathon 2027', org: 'TechCrunch',
+        id: 'h22', name: 'TechCrunch Disrupt Hackathon 2027', org: 'TechCrunch',
         depts: ['cse', 'ece'], level: 'international', cat: 'dev',
         focus: 'Startup-grade innovation — any domain, high business impact ideas',
         date: 'Sep 2027 (San Francisco, Registration: Aug 2027)',
@@ -1382,7 +1365,7 @@
       },
     ];
 
-    // ─── COMPANY CONTESTS ─────────────────────────────────────────────────────────
+    // ─── CORE DOMAIN CONTESTS ─────────────────────────────────────────────────────────
     const CONTESTS = [
       // ── AUTOMOTIVE / MECHANICAL ──
       {
@@ -1746,7 +1729,7 @@
       const notices = {
         hackathons: 'Showing hackathons — filter by department, level, and keyword below.',
         internships: 'Showing internships — filter by department, scope (national/international), and keyword below.',
-        contests: 'Showing company contests & challenges — primarily for Mechanical, Civil, EEE, and ECE students.'
+        contests: 'Showing core domain contests & challenges — primarily for Mechanical, Civil, EEE, and ECE students.'
       };
       document.getElementById('tab-notice').textContent = notices[tab];
       render();
