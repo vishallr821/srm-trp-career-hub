@@ -582,6 +582,14 @@
       color: #1a4d30
     }
 
+    /* JOB-OPPORTUNITY CHIP */
+    .chip.job-active {
+      border-color: #0a5c2a;
+      background: rgba(10, 92, 42, .10);
+      color: #0a5c2a;
+      font-weight: 700
+    }
+
     /* NO RESULTS */
     .no-res {
       text-align: center;
@@ -691,6 +699,9 @@
       <span class="chip active" data-level="all" onclick="setLevel('all',this)">All</span>
       <span class="chip" data-level="national" onclick="setLevel('national',this)">National</span>
       <span class="chip" data-level="international" onclick="setLevel('international',this)">International</span>
+      <div class="sep"></div>
+      <span class="filter-label">Opportunity:</span>
+      <span class="chip" id="job-chip" onclick="toggleJobFilter(this)">💼 Job / Internship Linked</span>
     </div>
 
     <!-- SEARCH -->
@@ -1721,6 +1732,7 @@
     let activeTab = 'hackathons';
     let activeDept = 'all';
     let activeLevel = 'all';
+    let activeJobFilter = false;
 
     function switchTab(tab, el) {
       activeTab = tab;
@@ -1746,6 +1758,16 @@
       activeLevel = level;
       document.querySelectorAll('[data-level]').forEach(c => c.classList.remove('active'));
       el.classList.add('active');
+      render();
+    }
+
+    function toggleJobFilter(el) {
+      activeJobFilter = !activeJobFilter;
+      if (activeJobFilter) {
+        el.classList.add('job-active');
+      } else {
+        el.classList.remove('job-active');
+      }
       render();
     }
 
@@ -1882,6 +1904,12 @@
       else { data = CONTESTS; renderer = renderContestCard; }
 
       let filtered = data.filter(d => deptMatch(d) && levelMatch(d));
+      if (activeJobFilter) {
+        // Internships are inherently job/opportunity-linked; hackathons & contests use the jobs flag
+        if (activeTab !== 'internships') {
+          filtered = filtered.filter(d => d.jobs === true);
+        }
+      }
       if (q) filtered = filtered.filter(d =>
         d.name.toLowerCase().includes(q) || d.org.toLowerCase().includes(q) ||
         d.focus.toLowerCase().includes(q)
